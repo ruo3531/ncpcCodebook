@@ -34,3 +34,19 @@ int main(){
     }
 
 }
+
+int n1 = s1.size(), n2 = s2.size();
+int dp[2][N] = {};
+for (int i = 1; i <= n1; i++)
+{
+    int cur = i % 2;
+    int old = 1 - cur;
+    for (int j = 1; j <= n2; ++j)
+    {
+        if (s1[i - 1] == s2[j - 1])
+            dp[cur][j] = dp[old][j - 1] + 1;
+        else
+            dp[cur][j] = max(dp[old][j], dp[cur][j - 1]);
+    
+    }
+}
