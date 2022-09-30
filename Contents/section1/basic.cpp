@@ -10,7 +10,7 @@ equal_range(a, a+n, k);
 // 從小到大
 priority_queue<int, vector<int>, greater<int>>pq
 
-insert(it,x)//向vector的任意迭代器it處插入一個元素x，時間複雜度O(N)
+insert(it,x)//向vector的任意迭代器it處插入一個元素x
 erase(it)//刪除迭代器爲it處的元素，erase(first,last)
 //刪除一個區間[first,last)內的所有元素，時間複雜度均爲O(N)
 
