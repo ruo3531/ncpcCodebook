@@ -45,3 +45,6 @@ int main(){
 		cout << "all elements are less than 20\n";
 	}
 }
+
+double cnt = 3.5555;
+cout << fixed << setprecision(3) << cnt ;
