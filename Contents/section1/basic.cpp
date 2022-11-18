@@ -29,6 +29,8 @@ insert(x)	//將x這個pair插入map中	O(log(n))
 count(x)	//回傳x這個key是否在map中	O(log(n)) 
 erase(x)	//刪除在map中key為x的	O(log(n)) 
 
+double cnt = 3.5555;
+cout << fixed << setprecision(3) << cnt ;
 	
 #include <bits/stdc++.h>
 using namespace std;
@@ -45,5 +47,3 @@ int main(){
 		cout << "all elements are less than 20\n";
 	}
 }
-double cnt = 3.5555;
-cout << fixed << setprecision(3) << cnt ;
