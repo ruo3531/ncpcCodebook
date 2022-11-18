@@ -1,4 +1,6 @@
 // c++ code
+std::ios::sync_with_stdio(false); // 加速
+
 #include <bits/stdc++.h>
 lower_bound(a, a + n, k);     //最左邊 ≥ k 的位置
 upper_bound(a, a + n, k);     //最左邊 > k 的位置

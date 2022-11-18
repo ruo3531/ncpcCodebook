@@ -27,15 +27,6 @@ int main(){
                 }
             }
         }
-        // for(int i = 0; i < n; i++){
-        //     cout << arr[i] << ":\n"[i == n-1];
-        // }
-        // for(int i = 0; i < n; i++){
-        //     cout << dp[i] << ":\n"[i == n-1];
-        // }
-        // for(int i = 0; i < n; i++){
-        //     cout << dp2[i] << ":\n"[i == n-1];
-        // }
         int lds = 0, lis = 0;
         for(int i = 0; i < n; i++){
             Max = max(Max, min(dp[i],dp2[i]));
@@ -43,4 +34,20 @@ int main(){
         cout << 2*Max-1 << '\n';
     }
 
+}
+
+void LDS(vector<int> &s){
+    if(s.size() == 0) return;
+    vector<int> v;
+    v.emplace_back(s[0]);
+    revseq[0] = 1;
+    for(int i = 1; i < s.size(); ++i){
+        int n = s[i];
+        if(n > v.back())
+            v.push_back(n);
+        else
+            *lower_bound(v.begin(), v.end(), n) = n;
+        revseq[i] = v.size();
+    }
+    return;
 }
